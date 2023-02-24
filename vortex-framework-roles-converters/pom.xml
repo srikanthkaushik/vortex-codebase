@@ -1,0 +1,27 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.vortex.framework</groupId>
+    <artifactId>vortex-root</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  <groupId>com.vortex.framework</groupId>
+  <artifactId>vortex-framework-roles-converters</artifactId>
+  <name>Roles Entities Converters</name>
+  <version>0.0.01-SNAPSHOT</version>
+  <description>This project contains Converters for Roles</description>
+	<dependencies>
+		<dependency>
+			<groupId>com.vortex.framework</groupId>
+			<artifactId>vortex-framework-roles-objects</artifactId>
+			<version>${project.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.vortex.framework</groupId>
+			<artifactId>vortex-framework-roles-jpa</artifactId>
+			<version>${project.version}</version>
+			<scope>compile</scope>
+		</dependency>
+	</dependencies>
+</project>
