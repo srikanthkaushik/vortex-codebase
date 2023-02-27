@@ -1,4 +1,4 @@
-# Default values for vortex-framework-features.
+# Default values for vortex-framework-roles.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -8,15 +8,15 @@ configMapToLoadAsAuthCreds: vortex-dev-google-auth-creds
 disableServiceAccountName: true
 disableSecurityContext: true
 image:
-  repository: srikanthkaushik/shreks-private-repo:vortex-framework-features
+  repository: srikanthkaushik/shreks-private-repo:vortex-framework-roles
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""
   
-dockerSecretName: "vortex-features-regcreds"
-imagePullSecrets: [name: "vortex-features-regcreds"]
+dockerSecretName: "vortex-roles-regcreds"
+imagePullSecrets: [name: "vortex-roles-regcreds"]
 nameOverride: ""
-fullnameOverride: "vortex-framework-features"
+fullnameOverride: "vortex-framework-roles"
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -44,7 +44,7 @@ service:
   type: LoadBalancer
   port: 80
   targetPort: 9995
-  name: vortex-framework-features-service
+  name: vortex-framework-roles-service
   namespace: vortex-dev
 
 ingress:

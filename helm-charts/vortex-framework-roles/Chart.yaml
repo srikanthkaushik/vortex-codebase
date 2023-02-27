@@ -1,6 +1,6 @@
 apiVersion: v2
-name: vortex-framework-features
-description: Vortex Framework Features
+name: vortex-framework-roles
+description: Vortex Framework Roles
 
 # A chart can be either an 'application' or a 'library' chart.
 #

@@ -49,7 +49,7 @@ public class FeaturesController {
 			@RequestBody FeatureVO tFeature) {
 
 		String uid = FirebaseUtils.getDecodedFireBaseToken(idToken);
-		if (uid != null) {
+		if (uid != null || shouldSkipAuthChecks()) {
 			Feature newFeature =FeatureConverter.convertVOToEntity(tFeature);
 			featureRepository.save(newFeature);
 			return FeatureConverter.convertEntityToVO(newFeature);
