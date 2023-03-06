@@ -1,0 +1,22 @@
+  <div class="font-medium mt-1 w-full p-10">
+      <nav class="bg-gray-600">
+        <h2 class="text-white text-lg">&#160;{{title}}</h2>
+      </nav>
+      <div class="font-medium mt-1 p-10 border shadow-lg grid grid-cols-3 gap-4">
+        <div class="col-span-1">
+          <label for="featureName" class="text-gray-800 w-full place-content-end font-semibold">  Feature Name:</label>
+        </div>
+        <div class="col-span-2">
+          <input type="text" class="w-full rounded-md bg-gray-300 border-transparent
+           focus:border-gray-100 focus:ring-1 focus:bg-teal-400">
+        </div>
+      </div>
+      <div class="font-medium mt-1 w-full p-10">
+        <div class="">
+          <button class="text-sm bg-gray-800 hover:bg-gray-400 text-white rounded-md px-3 py-2" (click)="doAll()">Show all Features</button>
+          &#160;
+          <button class="text-sm bg-gray-800 hover:bg-gray-400 text-white rounded-md px-3 py-2" (click)="doAddNewFeature()">Add New Feature</button>
+        </div>
+      </div>
+      </div>
+  

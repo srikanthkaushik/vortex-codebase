@@ -1,0 +1,37 @@
+  <div class="font-medium mt-1 w-full p-10">
+      <nav class="bg-gray-600">
+        <h2 class="text-white text-lg">&#160;{{title}}</h2>
+      </nav>
+      <div class="font-medium mt-1 p-10 border shadow-lg">
+        <table class="table-auto w-full text-base border-collapse">
+          <thead class="rounded-sm bg-gray-600 text-white">
+            <tr>
+              <th class="text-left border-b">Name</th>
+              <th class="text-left border-b">Description</th>
+              <th class="text-left border-b">Type</th>
+              <th class="text-left border-b">Resource</th>
+              <th class="text-left border-b">Parent Feature ID</th>
+              <th class="text-left border-b">Sort Order</th>
+              <th class="text-left border-b">Active?</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let feature of featureList" class="hover:bg-gray-400">
+              <td class="border-b-2">{{feature.name}}</td>
+              <td class="border-b-2">{{feature.description}}</td>
+              <td class="border-b-2">{{feature.typeCode}}</td>
+              <td class="border-b-2">{{feature.resourceName}}</td>
+              <td class="border-b-2">{{feature.parentFeatureId}}</td>
+              <td class="border-b-2">{{feature.sortOrder}}</td>
+              <td class="border-b-2">{{feature.activeInd}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    <div class="mt-1 w-full p-10">
+      <div class="">
+        <button class="text-sm bg-gray-800 hover:bg-gray-400 text-white rounded-md px-3 py-2" (click)="back()">Go Back</button>
+      </div>
+    </div>
+  </div>
+  
