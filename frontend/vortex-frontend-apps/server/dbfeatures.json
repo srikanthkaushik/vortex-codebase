@@ -1,0 +1,31 @@
+      
+{
+    "features": [
+        {
+          "id": 1,
+          "name": "Manage Features",
+          "typeCode": "MI",
+          "resourceName": "manageFeatures",
+          "parentFeatureId": 0,
+          "sortOrder": 100,
+          "appName": "SCH",
+          "activeInd": "Y",
+          "featureImageClass": "fa fa-download",
+          "description": "Manage Features"
+        },
+        {
+          "id": 2,
+          "name": "Manage Roles",
+          "typeCode": "MI",
+          "resourceName": "manageRoles",
+          "parentFeatureId": 0,
+          "sortOrder": 200,
+          "appName": "SCH",
+          "activeInd": "Y",
+          "featureImageClass": "fa fa-download",
+          "description": "Manage Roles"
+        }
+      ]
+}
+
+      

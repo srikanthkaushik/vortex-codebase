@@ -1,0 +1,20 @@
+{
+    "roles": [
+        {
+            "id": 1,
+            "name": "Manage Roles",
+            "appName": "SCH",
+            "activeInd": "Y",
+            "reservedInd": "N",
+            "description": "Manage Roles"
+        },
+        {
+            "id": 2,
+            "name": "ADMIN",
+            "appName": "SCH",
+            "activeInd": "Y",
+            "reservedInd": "Y",
+            "description": "Application Admin"
+        }
+    ]
+}
