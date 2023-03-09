@@ -5,5 +5,15 @@ import { Feature } from "../../model/feature";
     providedIn: 'root'
 })
 export class FeaturesLibGlobal {
-     public featureList: Feature[] = [];
+    public static appName: string;
+    public featureList: Feature[] = [];
+
+     public static setAppName(appName: string) {
+        console.log('setting app name:' + appName);
+        this.appName = appName;
+     }
+
+     public static getAppName() {
+        return this.appName;
+     }
 }

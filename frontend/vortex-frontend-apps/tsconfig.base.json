@@ -15,10 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@vortex-apps/features-lib": [
-        "libs/features-lib/src/index.ts"
-      ],
-      "@vortex-apps/roles-lib": ["libs/roles-lib/src/index.ts"]
+      "@vortex-apps/features-lib": ["libs/features-lib/src/index.ts"],
+      "@vortex-apps/roles-lib": ["libs/roles-lib/src/index.ts"],
+      "@vortex-apps/shared-lib": ["libs/shared-lib/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

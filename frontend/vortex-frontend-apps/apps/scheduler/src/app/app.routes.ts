@@ -4,8 +4,14 @@ import { loadRemoteModule } from '@angular-architects/module-federation';
 export const appRoutes: Route[] = [
   {
     path: '',
-    redirectTo: 'features',
+    redirectTo: 'home',
     pathMatch: 'full',
+  },
+  {
+    path: 'home',
+    loadComponent: async () =>
+      (await import('./components/scheduler-home/scheduler-home.component')).SchedulerHomeComponent,
+
   },
   {
     path: 'features',

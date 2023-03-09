@@ -7,8 +7,8 @@ import { Role } from './model/role';
   providedIn: 'root'
 })
 export class RolesService {
-  // private rolesAllUri = 'http://vroles-v1-vortex-scheduler-dev.apps.okd1.kaushik.int/rolesvc/role/all';
-  private rolesAllUri = 'http://localhost:3000/rolesvc/role/all';
+  private rolesAllUri = 'http://vroles-v1-vortex-scheduler-dev.apps.okd1.kaushik.int/rolesvc/role/all';
+  //private rolesAllUri = 'http://localhost:3000/rolesvc/role/all';
 
   constructor(
     private httpClient: HttpClient
