@@ -9,4 +9,7 @@ public interface FeatureRepository extends JpaRepository<Feature, Long>{
 	
 	@Query("select f from Feature f where active = 'Y'")
 	List<Feature> findActiveFeatures();
+
+	@Query("select f from Feature f where active = 'Y' and f.appName = :appName")
+	List<Feature> findActiveFeaturesByAppName(String appName);
 }
