@@ -40,7 +40,13 @@
           "outputHashing": "all",
           "customWebpackConfig": {
             "path": "apps/roles/webpack.prod.config.js"
-          }
+          },
+          "fileReplacements": [ 
+            {
+              "replace": "libs/roles-lib/src/environments/environment.ts",
+              "with": "environments/environment.prod.ts"
+            }
+          ]
         },
         "development": {
           "buildOptimizer": false,

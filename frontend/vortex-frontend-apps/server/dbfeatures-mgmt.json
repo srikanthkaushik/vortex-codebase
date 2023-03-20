@@ -1,0 +1,31 @@
+      
+{
+    "features": [
+        {
+          "id": 1,
+          "name": "Feature Mgmtsd",
+          "typeCode": "MI",
+          "resourceName": "features/featuresearch",
+          "parentFeatureId": 0,
+          "sortOrder": 100,
+          "appName": "SCH",
+          "activeInd": "Y",
+          "featureImageClass": "fa fa-download",
+          "description": "Manage Features"
+        },
+        {
+          "id": 2,
+          "name": "Role Mgmtsdd",
+          "typeCode": "MI",
+          "resourceName": "roles/rolesearch",
+          "parentFeatureId": 0,
+          "sortOrder": 200,
+          "appName": "SCH",
+          "activeInd": "Y",
+          "featureImageClass": "fa fa-download",
+          "description": "Manage Roles"
+        }
+      ]
+}
+
+      

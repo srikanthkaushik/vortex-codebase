@@ -5,12 +5,13 @@ import {
 } from '@angular/router';
 import { AppComponent } from './app/app.component';
 import { appRoutes } from './app/app.routes';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, provideHttpClient } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
 //import { CommonModule } from '@angular/common';
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(appRoutes, withEnabledBlockingInitialNavigation()),
     importProvidersFrom(HttpClientModule),
+    provideHttpClient()
   ],
 }).catch((err) => console.error(err));

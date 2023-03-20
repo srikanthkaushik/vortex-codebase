@@ -2,9 +2,9 @@ import { RouterModule } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { Feature } from '@vortex-apps/features-lib';
 import { FeaturesService } from '@vortex-apps/features-lib';
 import { SharedLibGlobal } from '@vortex-apps/shared-lib';
+import { Feature } from '@vortex-apps/features-lib';
 @Component({
   standalone: true,
   imports: [RouterModule, CommonModule],
@@ -30,25 +30,25 @@ export class AppComponent implements OnInit {
   constructor (
     private router: Router,
     private featureListService: FeaturesService,
-    public sharedLibGlobal: SharedLibGlobal
+    public sharedLib: SharedLibGlobal
   ) {
-    this.sharedLibGlobal.appCode = 'MGMT';
-    this.sharedLibGlobal.appName = 'MANAGEMENT CONSOLE';
+    sharedLib.appCode = 'MGMT';
+    sharedLib.appName = 'MANAGEMENT CONSOLE';
     
   }
 
   ngOnInit() {
-    this.initFeatureComponent();
+    //this.initFeatureComponent();
     this.initializeBase();
   }
 
   async initFeatureComponent():Promise<void> {
-    const featLib = await import('@vortex-apps/features-lib');
-    featLib.FeaturesLibGlobal.setAppName(this.sharedLibGlobal.appCode);
+    //const featLib = await import('@vortex-apps/features-lib');
+    //this.featureLibGlobal.setAppName(SharedLibGlobal.appCode);
   }
 
   initializeBase() {
-    this.featureListService.featureListByApp(this.sharedLibGlobal.appCode).subscribe((allFeatures: Feature[]) => {
+    this.featureListService.featureListByApp(this.sharedLib.appCode).subscribe((allFeatures: Feature[]) => {
       console.log('all features received:');
       console.log(allFeatures);
       this.availableFeatures = allFeatures;

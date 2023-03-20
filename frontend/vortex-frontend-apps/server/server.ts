@@ -27,6 +27,13 @@ server.get('/featuresvc/feature/all', (req: any, res: any) => {
     res.send(features);
 });
 
+server.post('/featuresvc/feature/allByApp', (req: any, res: any) => {
+  console.log('req*****');
+  console.log(req);
+  const features = readFeaturesByApp(req);
+  res.send(features);
+});
+
 server.get('/rolesvc/role/all', (req: any, res: any) => {
   const roles = readRoles();
   res.send(roles);
@@ -88,6 +95,20 @@ function readFeatures() {
   const dbRaw = fs.readFileSync('./server/dbfeatures.json');  
   const features = JSON.parse(dbRaw).features
   return features;
+}
+
+function readFeaturesByApp(req: any) {
+  console.log('appName:' + req.appCode);
+  if (req.body.appName == 'SCH') {
+    const dbRaw = fs.readFileSync('./server/dbfeatures.json');  
+    const features = JSON.parse(dbRaw).features
+    return features;
+  }
+  else {
+    const dbRaw = fs.readFileSync('./server/dbfeatures-mgmt.json');  
+    const features = JSON.parse(dbRaw).features
+    return features;
+  }  
 }
 
 function readRoles() {

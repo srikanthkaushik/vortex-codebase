@@ -1,4 +1,7 @@
-const { shareAll, withModuleFederationPlugin } = require('@angular-architects/module-federation/webpack');
+const { 
+  //shareAll, 
+  withModuleFederationPlugin 
+} = require('@angular-architects/module-federation/webpack');
 
 module.exports = withModuleFederationPlugin({
 
@@ -7,9 +10,18 @@ module.exports = withModuleFederationPlugin({
   exposes: {
     './Routes': './apps/features/src/app/proxy/proxy.routes.ts',
   },
-
   shared: {
-    ...shareAll({ singleton: true, strictVersion: true, requiredVersion: 'auto' }),
-  },
-
+    "@angular/core": { singleton: true, strictVersion: true, requiredVersion: '15.0.2' },
+    "@angular/common": { singleton: true, strictVersion: true, requiredVersion: '15.0.2' },
+    "@angular/common/http": { singleton: true, strictVersion: true, requiredVersion: '15.0.2' },
+    "@angular/router": { singleton: true, strictVersion: true, requiredVersion: '15.0.2' },
+    "shared-lib/shared-lib-global": { singleton: true, strictVersion: false },
+  }
+  // shared: {
+  //   ...shareAll({
+  //     singleton: true,
+  //     strictVersion: true,
+  //     requiredVersion: 'auto',
+  //   })
+  //},
 });

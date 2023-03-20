@@ -2,17 +2,24 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Feature } from './model/feature';
+import { SharedLibGlobal } from '@vortex-apps/shared-lib';
+import { environment } from '../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FeaturesService {
-  private featuresAllByAppUri = 'http://vfeatures-v1-vortex-scheduler-dev.apps.okd1.kaushik.int/featuresvc/feature/allByApp';
-  private featuresAllUri = 'http://vfeatures-v1-vortex-scheduler-dev.apps.okd1.kaushik.int/featuresvc/feature/all';
-
+  private featuresAllByAppUri = '/featuresvc/feature/allByApp';
+  private featuresAllUri = '/featuresvc/feature/all';
+  private serviceUrlBase: string;
   constructor(
-    private httpClient: HttpClient
-  ) {   }
+    private httpClient: HttpClient,
+    private sharedLib: SharedLibGlobal,
+    
+  ) {   
+    this.serviceUrlBase = environment.featuresApiUrl;
+    console.log(environment);
+  }
 
   featureListAll(): Observable<Feature[]> {
     const featureListAllUrl = this.featuresAllUri;
@@ -24,8 +31,18 @@ export class FeaturesService {
   }
 
   featureListByApp(appCode: string): Observable<Feature[]> {
-    const featuresAllByAppUri = this.featuresAllByAppUri;
+    console.log('featureListByApp in features.service.ts: appCode: ' + appCode);
+    const featuresAllByAppUri = this.serviceUrlBase + this.featuresAllByAppUri;
     return this.httpClient.post<Feature[]>(featuresAllByAppUri, {'appName': appCode}, {
+      headers: {
+        'Authorization': 'foo'
+      },
+    });
+  }
+
+  featureListByAppNoParm(): Observable<Feature[]> {
+    const featuresAllByAppUri = this.serviceUrlBase + this.featuresAllByAppUri;
+    return this.httpClient.post<Feature[]>(featuresAllByAppUri, {'appName': this.sharedLib.getAppName()}, {
       headers: {
         'Authorization': 'foo'
       },

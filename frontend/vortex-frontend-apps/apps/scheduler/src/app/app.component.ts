@@ -2,9 +2,10 @@ import { RouterModule } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
-import { Feature } from '@vortex-apps/features-lib';
+import { Feature, FeaturesLibGlobal } from '@vortex-apps/features-lib';
 import { FeaturesService } from '@vortex-apps/features-lib';
 import { SharedLibGlobal } from '@vortex-apps/shared-lib';
+
 @Component({
   standalone: true,
   imports: [RouterModule, CommonModule],
@@ -30,25 +31,35 @@ export class AppComponent implements OnInit {
   constructor (
     private router: Router,
     private featureListService: FeaturesService,
-    public sharedLibGlobal: SharedLibGlobal
+    public featureLibGlobal: FeaturesLibGlobal,
+    public sharedLib: SharedLibGlobal
   ) {
-    this.sharedLibGlobal.appCode = 'SCH';
-    this.sharedLibGlobal.appName = 'SCHEDULER';
+    console.log('scheduler.app.component.ts constructor');
+    sharedLib.setAppName('SCH');
   }
 
   ngOnInit() {
     console.log('ngOnInit');
-    this.initFeatureComponent();
+    //this.initFeatureComponent();
     this.initializeBase();
   }
 
-  async initFeatureComponent():Promise<void> {
-    const featLib = await import('@vortex-apps/features-lib');
-    featLib.FeaturesLibGlobal.setAppName(this.sharedLibGlobal.appCode);
-  }
+  // async initFeatureComponent():Promise<void> {
+  //   console.log('initFeatureComponent');
+  //   console.log('initFeatureComponent: ' + this.sharedLib.getAppName());
+  //   //const sharedLib = await import('@vortex-apps/shared-lib');   
+  // }
 
   initializeBase() {
-    this.featureListService.featureListByApp(this.sharedLibGlobal.appCode).subscribe((allFeatures: Feature[]) => {
+    // console.log('check this 1');
+    // this.featureListService.featureListByAppNoParm().subscribe((allFeatures: Feature[]) => {
+    //   console.log('all features received: check this 2');
+    //   console.log(allFeatures);
+      
+    // });
+    // console.log('check this 2');
+    console.log('check this 2 : ' + this.sharedLib.getAppName());
+    this.featureListService.featureListByApp(this.sharedLib.getAppName()).subscribe((allFeatures: Feature[]) => {
       console.log('all features received:');
       console.log(allFeatures);
       this.availableFeatures = allFeatures;

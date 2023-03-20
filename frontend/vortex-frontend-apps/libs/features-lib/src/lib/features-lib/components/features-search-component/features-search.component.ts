@@ -22,8 +22,8 @@ export class FeaturesSearchComponent {
   constructor(
       private featureServices: FeaturesService,
       public featureLibGlobal: FeaturesLibGlobal,
-      public sharedLibGlobal: SharedLibGlobal,
       private router: Router,
+      public sharedLib: SharedLibGlobal
   ) {
     // Do something here
   }
@@ -32,21 +32,10 @@ export class FeaturesSearchComponent {
     console.log('search features');
   }
 
-  doAll() {
-    console.log('doAll()');
-    this.featureServices.featureListAll().subscribe((allFeatures: Feature[]) => {
-      console.log('this.sharedLibGlobal.appCode' + this.sharedLibGlobal.appCode);
-      console.log('all features received:');
-      console.log(allFeatures);
-      this.featureLibGlobal.featureList = allFeatures;
-      this.router.navigate(['/features/featurelist']);
-    });
-  }
-
   doFeaturesByApp() {
     console.log('doFeaturesByApp()');
-    console.log('FeaturesLibGlobal.getAppName()' + FeaturesLibGlobal.getAppName());
-    this.featureServices.featureListByApp(FeaturesLibGlobal.getAppName()).subscribe((allFeatures: Feature[]) => {
+    console.log('this.sharedLibGlobal.appName: ' + this.sharedLib.getAppName());
+    this.featureServices.featureListByApp(this.sharedLib.getAppName()).subscribe((allFeatures: Feature[]) => {
       console.log('all features received:');
       console.log(allFeatures);
       this.featureLibGlobal.featureList = allFeatures;

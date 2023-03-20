@@ -43,7 +43,13 @@
           "outputHashing": "all",
           "customWebpackConfig": {
             "path": "apps/scheduler/webpack.prod.config.js"
-          }
+          },
+          "fileReplacements": [ 
+            {
+              "replace": "libs/features-lib/src/environments/environment.ts",
+              "with": "environments/environment.prod.ts"
+            }
+          ]
         },
         "development": {
           "buildOptimizer": false,

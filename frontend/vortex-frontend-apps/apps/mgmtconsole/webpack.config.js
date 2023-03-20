@@ -9,6 +9,7 @@ module.exports = withModuleFederationPlugin({
       singleton: true,
       strictVersion: true,
       requiredVersion: 'auto',
+      //pinned: true
     }),
   },
 });

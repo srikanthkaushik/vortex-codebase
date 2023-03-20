@@ -8,4 +8,8 @@ import { CommonModule } from '@angular/common';
   templateUrl: './shared-lib.component.html',
   styleUrls: ['./shared-lib.component.scss'],
 })
-export class SharedLibComponent {}
+export class SharedLibComponent {
+  constructor() {
+    console.log('shared-lib.component.ts constructor');
+  }
+}
