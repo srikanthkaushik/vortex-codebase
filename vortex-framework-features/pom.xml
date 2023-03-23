@@ -7,7 +7,7 @@
   </parent>
   <groupId>com.vortex.framework</groupId>
   <artifactId>vortex-framework-features</artifactId>
-  <version>0.0.05-SNAPSHOT</version>
+  <version>0.0.06-SNAPSHOT</version>
   <name>Features Entities</name>
   <description>This project contains the Springboot Application for Feature related services</description>
 	<build>

@@ -28,7 +28,7 @@ import com.vortex.framework.objects.feature.FeatureVO;
 @Controller // This means that this class is a Controller
 @CrossOrigin
 //Allow all (origins = { "http://localhost:4200", "https://dev-shreksworld.duckdns.org", "https://uat-shreksworld.duckdns.org", "https://shreksworld.duckdns.org" })
-@RequestMapping(path = "/featuresvc/feature") // This means URL's start with /featuresvc (after Application path)
+@RequestMapping(path = "/services/featuresvc") // This means URL's start with /featuresvc (after Application path)
 public class FeaturesController {
 	static final Logger logger = LoggerFactory.getLogger(FeaturesController.class);
 

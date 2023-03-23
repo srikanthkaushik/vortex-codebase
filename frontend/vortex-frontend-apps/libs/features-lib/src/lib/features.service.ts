@@ -9,8 +9,8 @@ import { environment } from '../environments/environment';
   providedIn: 'root'
 })
 export class FeaturesService {
-  private featuresAllByAppUri = '/featuresvc/feature/allByApp';
-  private featuresAllUri = '/featuresvc/feature/all';
+  private featuresAllByAppUri = '/featuresvc/allByApp';
+  private featuresAllUri = '/featuresvc/all';
   private serviceUrlBase: string;
   constructor(
     private httpClient: HttpClient,

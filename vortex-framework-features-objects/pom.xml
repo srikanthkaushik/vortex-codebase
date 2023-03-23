@@ -9,7 +9,7 @@
   </parent>
 	<packaging>jar</packaging>
 	<artifactId>vortex-framework-features-objects</artifactId>
-	<version>0.0.05-SNAPSHOT</version>
+	<version>0.0.06-SNAPSHOT</version>
 	<name>Features Objects</name>
 	<description>Common Classes needed by feature entity microservices</description>
 	<dependencies>

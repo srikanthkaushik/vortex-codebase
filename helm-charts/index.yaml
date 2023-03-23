@@ -2,48 +2,18 @@ apiVersion: v1
 entries:
   vortex-framework-features:
   - apiVersion: v2
-    appVersion: 0.0.05-SNAPSHOT
-    created: "2023-03-09T11:07:48.0992522-05:00"
+    appVersion: 0.0.06-SNAPSHOT
+    created: "2023-03-22T16:34:21.0364143-04:00"
     description: Vortex Framework Features
-    digest: 70a068e835774bee1d6b01a491512126207cdd7e5f32b455321c49e2f779f229
+    digest: 4e8be6530a0be7de43ab612d3fb74c575ec14c5733a032d3b908f01de0acdd50
     name: vortex-framework-features
     type: application
     urls:
-    - vortex-framework-features-0.0.05-SNAPSHOT.tgz
-    version: 0.0.05-SNAPSHOT
-  - apiVersion: v2
-    appVersion: 0.0.04-SNAPSHOT
-    created: "2023-03-09T11:07:48.0992522-05:00"
-    description: Vortex Framework Features
-    digest: 3b8b2b6becfced424227fa739d9af6ae3fc045b902f248ebe3c6a995da17acf9
-    name: vortex-framework-features
-    type: application
-    urls:
-    - vortex-framework-features-0.0.04-SNAPSHOT.tgz
-    version: 0.0.04-SNAPSHOT
-  - apiVersion: v2
-    appVersion: 0.0.03-SNAPSHOT
-    created: "2023-03-09T11:07:48.0992522-05:00"
-    description: Vortex Framework Features
-    digest: a91c31a2114d5ff8b0c2c860ba5a4a4f8745d5581319a6024c93caf1ab7bfc7b
-    name: vortex-framework-features
-    type: application
-    urls:
-    - vortex-framework-features-0.0.03-SNAPSHOT.tgz
-    version: 0.0.03-SNAPSHOT
-  - apiVersion: v2
-    appVersion: 0.0.02-SNAPSHOT
-    created: "2023-03-09T11:07:48.0992522-05:00"
-    description: Vortex Framework Features
-    digest: 50c41cf3a1279631016ecd97694ab029e485de36b06f8cfb5e62a360b1466b7e
-    name: vortex-framework-features
-    type: application
-    urls:
-    - vortex-framework-features-0.0.02-SNAPSHOT.tgz
-    version: 0.0.02-SNAPSHOT
+    - vortex-framework-features-0.0.06-SNAPSHOT.tgz
+    version: 0.0.06-SNAPSHOT
   - apiVersion: v2
     appVersion: 0.0.01-SNAPSHOT
-    created: "2023-03-09T11:07:48.0962341-05:00"
+    created: "2023-03-22T16:34:21.0353236-04:00"
     description: Vortex Framework Features
     digest: e6ce1e62699037035f0b20bd2079f1013e128c162c7d12b7745e1eab263652b6
     name: vortex-framework-features
@@ -54,7 +24,7 @@ entries:
   vortex-framework-roles:
   - apiVersion: v2
     appVersion: 0.0.01-SNAPSHOT
-    created: "2023-03-09T11:07:48.1048705-05:00"
+    created: "2023-03-22T16:34:21.0386922-04:00"
     description: Vortex Framework Roles
     digest: 0fd487aaf18cdcef55aca04a201c3e1279608424eb99a72e8456b40f566aae84
     name: vortex-framework-roles
@@ -62,4 +32,45 @@ entries:
     urls:
     - vortex-framework-roles-0.0.01-SNAPSHOT.tgz
     version: 0.0.01-SNAPSHOT
-generated: "2023-03-09T11:07:48.0962341-05:00"
+  vortex-frontend-scheduler:
+  - apiVersion: v2
+    appVersion: 0.0.13.SNAPSHOT
+    created: "2023-03-22T16:34:21.0424357-04:00"
+    description: Vortex Frontend Scheduler
+    digest: 15d38b46714531ae0946ea9b876d0076576a99ab94ae9e050cf244be8c76fcac
+    name: vortex-frontend-scheduler
+    type: application
+    urls:
+    - vortex-frontend-scheduler-0.0.13-SNAPSHOT.tgz
+    version: 0.0.13-SNAPSHOT
+  - apiVersion: v2
+    appVersion: 0.0.12.SNAPSHOT
+    created: "2023-03-22T16:34:21.0413753-04:00"
+    description: Vortex Frontend Scheduler
+    digest: 79faaeb32319c65f9e50eb61d6549b677270be7efbb1727acdbf864dda9d6f31
+    name: vortex-frontend-scheduler
+    type: application
+    urls:
+    - vortex-frontend-scheduler-0.0.12-SNAPSHOT.tgz
+    version: 0.0.12-SNAPSHOT
+  - apiVersion: v2
+    appVersion: 0.0.11.SNAPSHOT
+    created: "2023-03-22T16:34:21.0408448-04:00"
+    description: Vortex Frontend Scheduler
+    digest: 3ee466db9050d2785569c6133b0ddd324bde6a9b9706f0c7cc8db3c56d1f3137
+    name: vortex-frontend-scheduler
+    type: application
+    urls:
+    - vortex-frontend-scheduler-0.0.11-SNAPSHOT.tgz
+    version: 0.0.11-SNAPSHOT
+  - apiVersion: v2
+    appVersion: 0.0.01-SNAPSHOT
+    created: "2023-03-22T16:34:21.0397698-04:00"
+    description: Vortex Frontend Scheduler
+    digest: 9e201f6be0d812cafc0d9b8c09ab919217249ef8ad32cd63b5e2ae82985a4d67
+    name: vortex-frontend-scheduler
+    type: application
+    urls:
+    - vortex-frontend-scheduler-0.0.01-SNAPSHOT.tgz
+    version: 0.0.01-SNAPSHOT
+generated: "2023-03-22T16:34:21.0342383-04:00"

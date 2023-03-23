@@ -8,7 +8,7 @@
   <groupId>com.vortex.framework</groupId>
   <artifactId>vortex-framework-features-converters</artifactId>
   <name>Features Entities Converters</name>
-  <version>0.0.05-SNAPSHOT</version>
+  <version>0.0.06-SNAPSHOT</version>
   <description>This project contains Converters for Features</description>
 	<dependencies>
 		<dependency>
